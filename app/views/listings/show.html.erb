@@ -4,6 +4,11 @@
   <%= image_tag @listing.picture.url(:medium) %>
 <% end %>
 <p>
+  <b>Price:</b>
+  $<%= @listing.price %>
+</p>
+
+<p>
   <b>Number:</b>
   <%= @listing.Number %>
 </p>
