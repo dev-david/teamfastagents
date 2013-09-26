@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<% if @listing.picture_file_name %>
+  <%= image_tag @listing.picture.url(:medium) %>
+<% end %>
 <p>
   <b>Number:</b>
   <%= @listing.Number %>

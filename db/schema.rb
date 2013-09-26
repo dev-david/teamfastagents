@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130926110020) do
+ActiveRecord::Schema.define(:version => 20130926115744) do
 
   create_table "listings", :force => true do |t|
     t.string   "Number"
@@ -25,8 +25,12 @@ ActiveRecord::Schema.define(:version => 20130926110020) do
     t.string   "Bathrooms"
     t.string   "SqFt"
     t.string   "Lot"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
 end

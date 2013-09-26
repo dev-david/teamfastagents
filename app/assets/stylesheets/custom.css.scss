@@ -3,7 +3,7 @@
 @import "flat-ui";
 
 body {
-	padding: 3px;
+	padding: 55px;
 }
 
 li {
@@ -14,6 +14,16 @@ li {
 	margin: 0px auto;
 }
 
+.david_brand {
+	color: #ffffff;
+	background-color: #3498db;
+	display: block;
+	float: left;
+	padding: 10px 20px 10px;
+	margin-left: -20px;
+	font-size: 20px;
+	font-weight: 600;
+}
 
 .featured_listings {
 	background-color: #2980b9;
@@ -34,6 +44,3 @@ li {
 	color: #fff;
 }
 
-#david_brand {
-	color: blue;
-}

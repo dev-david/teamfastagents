@@ -7,6 +7,8 @@ gem 'newrelic_rpm'
 gem "flat-ui-rails"
 gem 'fancybox-rails'
 gem "font-awesome-rails"
+gem "paperclip", "~> 3.0"
+gem 'aws-sdk', '~> 1.5.7'
 
 
 # Bundle edge Rails instead:

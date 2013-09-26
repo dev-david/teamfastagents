@@ -1,7 +1,8 @@
-<h1>Listing listings</h1>
+<h1>Listings</h1>
 
 <table class="table table-hover">
   <tr>
+    <th></th>
     <th>Number</th>
     <th>Address</th>
     <th>Address2</th>
@@ -20,6 +21,11 @@
 
 <% @listings.each do |listing| %>
   <tr>
+    <td>
+        <% if listing.picture_file_name %>
+            <%= image_tag listing.picture.url(:thumb) %>
+        <% end %>
+    </td>
     <td><%= listing.Number %></td>
     <td><%= listing.Address %></td>
     <td><%= listing.Address2 %></td>
