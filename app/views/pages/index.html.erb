@@ -1,0 +1,26 @@
+<div class="row-fluid">
+	<div class="span6 offset3">
+		<img src="images/fastagentslogo.png" />
+		<h3 class="text-center">Experienced. <span class="gray_text">Dedicated.</span> <span style="color: #F99D1C; background-color: #000; padding: 5px;">FAST.</span></h3>
+	</div>
+</div>
+<!-- Featured Listings -->
+<div class="row-fluid">
+	<div class="span12 featured_listings text-center">
+		<h1 class="white_text">Featured Listings</h3>
+		<% @listings.each do |listing| %>
+			<div class="span3">
+				<h4><%= listing.Number %> <%= listing.Address %></h4>
+				<small><%= listing.Address2 %></small>
+				<small><%= listing.City %> <%= listing.State %>, <%= listing.Zip %></small>
+				<ul>
+					<li>Bed: <%= listing.Rooms  %></li>
+					<li>Bath: <%= listing.Bathrooms  %></li>
+					<li>SqFt: <%= listing.SqFt  %></li>
+					<li>Lot: <%= listing.Lot  %></li>
+				</ul>
+			    <p><%= listing.Description %></p>
+			</div>
+		<% end %>
+	</div>
+</div>

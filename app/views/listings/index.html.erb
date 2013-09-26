@@ -1,0 +1,43 @@
+<h1>Listing listings</h1>
+
+<table class="table table-hover">
+  <tr>
+    <th>Number</th>
+    <th>Address</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Description</th>
+    <th>Rooms</th>
+    <th>Bathrooms</th>
+    <th>Sqft</th>
+    <th>Lot</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @listings.each do |listing| %>
+  <tr>
+    <td><%= listing.Number %></td>
+    <td><%= listing.Address %></td>
+    <td><%= listing.Address2 %></td>
+    <td><%= listing.City %></td>
+    <td><%= listing.State %></td>
+    <td><%= listing.Zip %></td>
+    <td><%= listing.Description %></td>
+    <td><%= listing.Rooms %></td>
+    <td><%= listing.Bathrooms %></td>
+    <td><%= listing.SqFt %></td>
+    <td><%= listing.Lot %></td>
+    <td><%= link_to 'Show', listing %></td>
+    <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+    <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Listing', new_listing_path %>

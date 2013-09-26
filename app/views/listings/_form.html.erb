@@ -1,0 +1,61 @@
+<%= form_for(@listing) do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Number %><br />
+    <%= f.text_field :Number %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br />
+    <%= f.text_field :Address %>
+  </div>
+  <div class="field">
+    <%= f.label :Address2 %><br />
+    <%= f.text_field :Address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :City %><br />
+    <%= f.text_field :City %>
+  </div>
+  <div class="field">
+    <%= f.label :State %><br />
+    <%= f.text_field :State %>
+  </div>
+  <div class="field">
+    <%= f.label :Zip %><br />
+    <%= f.text_field :Zip %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_field :Description %>
+  </div>
+  <div class="field">
+    <%= f.label :Rooms %><br />
+    <%= f.text_field :Rooms %>
+  </div>
+  <div class="field">
+    <%= f.label :Bathrooms %><br />
+    <%= f.text_field :Bathrooms %>
+  </div>
+  <div class="field">
+    <%= f.label :SqFt %><br />
+    <%= f.text_field :SqFt %>
+  </div>
+  <div class="field">
+    <%= f.label :Lot %><br />
+    <%= f.text_field :Lot %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
