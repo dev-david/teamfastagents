@@ -10,21 +10,27 @@
 		<h1 class="white_text">Featured Listings</h3>
 		<% @listings.each do |listing| %>
 			<div class="span3">
+				<span class="price">$<%= listing.price %></span>
 				<% if listing.picture_file_name %>
 					<%= link_to image_tag(listing.picture.url(:medium)), listing %>
 				<% end %>
-				<h3>$<%= listing.price %></h3>
 				<h4><%= listing.Number %> <%= listing.Address %></h4>
 				<small><%= listing.Address2 %></small>
 				<small><%= listing.City %> <%= listing.State %>, <%= listing.Zip %></small>
-				<ul>
-					<li>Bed: <%= listing.Rooms  %></li>
-					<li>Bath: <%= listing.Bathrooms  %></li>
-					<li>SqFt: <%= listing.SqFt  %></li>
-					<li>Lot: <%= listing.Lot  %></li>
-				</ul>
+				<table class="table">
+					<tbody>
+						<tr>
+							<td>Bed: <%= listing.Rooms  %></td>
+							<td>Bath: <%= listing.Bathrooms  %></td>
+						</tr>
+						<tr>
+							<td>SqFt: <%= listing.SqFt  %></td>
+							<td>Lot: <%= listing.Lot  %></td>
+						</tr>
+					</tbody>
+				</table>
 			    <p><%= listing.Description %> <br><br>
-			    	<h4><%= link_to 'Details', listing %></h4>
+			    	<h4><%= link_to 'Details', listing, class: "orange_text" %></h4>
 			    </p>
 			</div>
 		<% end %>
