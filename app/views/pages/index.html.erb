@@ -13,7 +13,7 @@
 				<% if listing.picture_file_name %>
 					<%= link_to image_tag(listing.picture.url(:medium)), listing %>
 				<% end %>
-				<h3><%= listing.price %></h3>
+				<h3>$<%= listing.price %></h3>
 				<h4><%= listing.Number %> <%= listing.Address %></h4>
 				<small><%= listing.Address2 %></small>
 				<small><%= listing.City %> <%= listing.State %>, <%= listing.Zip %></small>
