@@ -1,6 +1,15 @@
 class PagesController < ApplicationController
+ 
   def index
-    @listings = Listing.all
-  	
+    @listings = Listing.all 	
+  end
+
+  def blog
+  end
+
+  def contact
+  end
+
+  def about
   end
 end
