@@ -10,7 +10,7 @@
 	<div class="span12 featured_listings text-center">
 		<h1 class="white_text">Featured Listings</h3>
 		<% @listings.each do |listing| %>
-			<div class="span3">
+			<div class="span3 featured_box">
 				<span class="price">$<%= listing.price %></span>
 				<% if listing.picture_file_name %>
 					<%= link_to image_tag(listing.picture.url(:medium)), listing %>
