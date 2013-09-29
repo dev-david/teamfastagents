@@ -43,16 +43,25 @@ li {
 	font-size: 20px;
 }
 
+.featured_box {
+	display: inline-block;
+	width: 300px;
+	height: 500px;
+	padding: 3px;
+	background-color: #fff;
+	margin: 15px;
+}
+
 .featured_listings {
 	background-color: #2980b9;
 	padding: 5px;
 }
 
-.featured_listings div {
-	/*border: solid 2px gray;*/
+/*.featured_listings div {
+	border: solid 2px gray;
 	padding: 3px;
 	background-color: #fff
-}
+}*/
 
 .featured_listings div:hover {
 	box-shadow: 0px 0px 5px #fff;;
@@ -63,7 +72,7 @@ li {
 }
 
 .featured_listings img {
-	max-height: 202px;
+	height: 202px;
 }
 
 .gray_text {
@@ -94,4 +103,3 @@ li {
 .white_text {
 	color: #fff;
 }
-
